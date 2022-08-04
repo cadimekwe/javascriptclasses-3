@@ -124,4 +124,151 @@ function sortExercise(mummy) {
 console.log(sortExercise(mummy)); 
 console.log(breakfast.sort());
 
-// LOOPS
+// LOOPS- used to do something that is continous
+// syntax
+// const array = [         ];
+// for (let index = 0; index < array.length; index++) {
+//     const arrayElement = array[index];
+//     } - this is the actual syntax
+
+// console.log(array[index]);- just so i (the developer)can see it
+
+
+
+const daddy = [1, 2, 3, 4, 5, 6];
+for (let loopy = 0; loopy < daddy.length; loopy++) {
+    const daddysElement = daddy[loopy];
+    console.log(`Array index is ${loopy} and my element is = ${daddy[loopy]}`);
+}
+
+// while loop
+let people = 0;
+while (people < 10) {
+    console.log(people);
+    people++;
+}
+console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>')
+
+// loop exercise 1
+const nigeria = [1,2,3,4,5,6,7,8,9,10,11];
+for (let ghana = 0; ghana < nigeria.length; ghana++) {
+    const nigeriaElement = nigeria[ghana];
+    console.log(nigeria[ghana]);
+}
+for (let ghana = nigeria.length -1; ghana >= 0; ghana--) {
+    const nigeriaElement = nigeria[ghana];
+    console.log(nigeria[ghana]);
+}
+
+// loop exercise 2
+let tasks = ['wash dishes', 'wash clothes', 'cook tea', 'go shopping'];
+for (let household = 0; household < tasks.length; household++) {
+    const element = tasks[household];
+    console.log(`task ${household+1}: ${tasks[household]}`);
+}
+
+// loop exercise 4
+let evenNumbers = [1,2,3,4,5,6,7,8,9,10];
+for (let even = 0; even < evenNumbers.length; even++) {
+    const element = evenNumbers[even];
+    if (evenNumbers[even] >=2 && evenNumbers[even] <=10) {
+        if(evenNumbers[even] % 2 ===0){
+            console.log(evenNumbers[even]);
+        }
+    }
+}
+
+// // loop exercise 5
+// let x = 0;
+// while (x < 3) {
+//     alert(`number ${x}!`);
+//     x++;
+// }
+
+// loop exercise 6
+
+
+
+// character index
+let fullName = 'Daniel James';
+console.log(fullName.charAt(5));
+console.log(fullName.endsWith());
+
+// arrow functions and array methods
+// => - this is the arrow function. it makes thing easy
+
+// instead of 
+function additional(a,b) {
+    return a+b;
+}
+console.log(additional(344, 344));
+
+// DO THIS - arrow function
+let addition = (c,d) => c-d;
+console.log(addition(555, 556));
+
+// SCOPE- global scope and block scope. eg: 'let comm' is global scope. 'addition' in the function statement is a function scope and cant be called outside the function statement 
+let comm = 25;
+function multiplyAdd(f,g,h) {
+    let addition = f + g;
+    return addition * h + comm;
+}
+
+console.log(multiplyAdd(55, 66, 77));
+
+// ForEach function
+const numArray = [1,2,3,4,5];
+function multiplyArrays(arr) {
+    let subtract = 2;
+    arr.forEach((items) => {
+        subtract = items * subtract;
+    })
+    return subtract
+}
+
+console.log(multiplyArrays(numArray)); 
+
+// call back function
+// function greeting(name) {
+//     alert(`Hello ${name}`)
+// }
+
+// function userName(popup){
+//     let name = prompt('Please enter your name');
+//     popup(name);
+// }
+
+// userName(greeting);
+
+// MAP FILTER and REDUCE
+// map returns a new array, filter filter outs and assigns it to do something
+// filter - you are filtering a particular array with a condition
+const testScores = [45, 56, 78, 90, 89, 67, 65, 34, 20];
+const filteredArray = testScores.filter((test)=> test >= 60); 
+console.log(filteredArray);
+// map- create a new array with adjusted values
+const mappedArray = testScores.map((score) => {
+    return score * 2;
+})
+console.log(mappedArray);
+
+let kitchenGoods = ['pot', 'pan', 'spoon', 'kettle'];
+const newKitchenGoods = kitchenGoods.map((goods) => {
+    return goods + 's'; 
+})
+console.log(newKitchenGoods); 
+
+// reduce
+let spoon = [ 1,2,3,4,5];
+const reduceSum = spoon.reduce((total, current) => {
+    return total + current
+}, 1)
+console.log(reduceSum);
+
+const reduceProduct = spoon.reduce((total, current) => {
+    return total*current
+}, 2)
+console.log(reduceProduct);
+
+
+
